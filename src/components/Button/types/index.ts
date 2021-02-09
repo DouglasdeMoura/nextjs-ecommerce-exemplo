@@ -4,7 +4,7 @@ export interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
-  loading?: boolean;
+  loading?: boolean | undefined;
   background?: string;
   color?: string;
 }

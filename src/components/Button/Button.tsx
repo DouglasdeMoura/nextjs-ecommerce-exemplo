@@ -16,7 +16,7 @@ const Button: FC<IProps> = ({
     background={background}
     color={color}
     disabled={loading}
-    loading={loading}
+    isLoading={loading}
     data-has-left-icon={!!iconLeft}
     data-has-right-icon={!!iconRight}
     {...rest}

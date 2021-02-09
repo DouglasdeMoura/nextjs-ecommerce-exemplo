@@ -4,7 +4,7 @@ import { lighten, darken } from 'polished';
 interface IButtonTag {
   background: string;
   color: string;
-  loading: boolean;
+  isLoading: boolean;
 }
 
 const spin = keyframes`
@@ -34,7 +34,7 @@ export const ButtonTag = styled.button<IButtonTag>`
   }
 
   .button-content {
-    visibility: ${(props) => (props.loading ? 'hidden' : '')};
+    visibility: ${(props) => (props.isLoading ? 'hidden' : '')};
     display: flex;
     justify-content: space-between;
     gap: 16px;
@@ -42,7 +42,7 @@ export const ButtonTag = styled.button<IButtonTag>`
 
   .loading-icon {
     position: absolute;
-    display: ${(props) => (props.loading ? 'block' : 'none')};
+    display: ${(props) => (props.isLoading ? 'block' : 'none')};
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
