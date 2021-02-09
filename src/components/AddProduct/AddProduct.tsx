@@ -12,14 +12,20 @@ const AddProduct = () => {
   const [descricao, handleDescricao, descricaoValidacao] = useValue('', notEmpty, 'Insira a descrição do produto');
   const handleOnSubmit = (event: FormEvent) => {
     event.preventDefault();
-    /*
     const payload = {
-      produto,
+      nome: produto,
       preco,
       imagem,
       descricao,
     };
-    */
+
+    fetch('/api/adicionar', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    })
+      .catch((error) => {
+        throw new Error(error);
+      });
   };
 
   return (
