@@ -8,6 +8,7 @@ const Input: FC<IProps> = ({
   iconRight,
   label,
   error,
+  ref,
   ...rest
 }) => (
   <InputContainer>
@@ -19,6 +20,7 @@ const Input: FC<IProps> = ({
       <InputTag
         id={label}
         disabled={disabled}
+        ref={ref}
         {...rest}
       />
       {iconRight && <span className="icon-right">{iconRight}</span>}

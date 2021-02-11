@@ -22,6 +22,9 @@ const AddProduct = () => {
     fetch('/api/adicionar', {
       method: 'POST',
       body: JSON.stringify(payload),
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
     })
       .catch((error) => {
         throw new Error(error);

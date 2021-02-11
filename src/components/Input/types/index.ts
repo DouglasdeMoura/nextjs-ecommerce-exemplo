@@ -6,4 +6,5 @@ export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   iconRight?: ReactNode;
   label: string;
   error?: string;
+  ref?: any;
 }
